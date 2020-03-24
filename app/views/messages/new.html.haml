@@ -1,0 +1,15 @@
+- if !@message.errors.empty?
+  .alert.alert-error
+    %ul
+      - @message.errors.full_messages.each do |msg|
+        %li= msg
+.well
+  = form_for @message, :html => {multipart: true, :class => "form-horizontal image" }  do |f|
+    .form-group
+      = f.label :Message, :class => 'control-label col-lg-2'
+      = f.text_field :name, :class => 'form-control'
+    %br/
+    %br/
+    = f.label :DATA
+    = f.file_field :attachment
+    = f.submit "Save", class: "btn btn-primary"
