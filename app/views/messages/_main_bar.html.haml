@@ -1,0 +1,26 @@
+.chat-main
+  .main-header
+    .main-header__group
+      %h1.main-header__group__name
+        学習
+      %ul.main-header__group__member
+        メンバー : 
+        %li.main-header__group__member__name
+          元村
+    .main-header__edit-btn
+      編集
+  
+  .messages
+    .message
+      %table.table.table-bordered.table-striped
+        %thead
+          %tr
+            %th メッセージ
+            %th 投稿データ
+            %th  
+        %tbody
+          - @messages.each do |message|
+            %tr
+              %td= message.name
+              %td= link_to message.attachment.to_s.gsub('/', ' ').split.last, message.attachment_url
+              %td= button_to "削除",  message, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{message.name}?"
