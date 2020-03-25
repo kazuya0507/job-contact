@@ -1,19 +1,4 @@
-- if !flash[:notice].blank?
-  .alert.alert-info
-    = flash[:notice]
-%br/
-= link_to "Upload PDF", new_message_path, class: "btn btn-primary"
-%br/
-%br/
-%table.table.table-bordered.table-striped
-  %thead
-    %tr
-      %th Name
-      %th Download Link
-      %th  
-  %tbody
-    - @messages.each do |message|
-      %tr
-        %td= message.name
-        %td= link_to message.attachment.to_s.gsub('/', ' ').split.last, message.attachment_url
-        %td= button_to "Delete",  message, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{message.name}?"
+.wrapper
+  = render "left_bar"
+  = render "main_bar"
+  = render "right_bar"
