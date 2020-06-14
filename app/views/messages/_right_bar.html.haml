@@ -6,20 +6,9 @@
   .others
     .other
       %ul.other__list
-        %li.other__list__department
-          総務部
         %li.other__list__name
-          清水
-        %li.other__list__status
-          勤務中
-      %ul.other__list
-        %li.other__list__department
-          総務部
-        %li.other__list__name
-          松井
-        %li.other__list__status
-          休暇中
+          = current_user.name
 
   .posts
     .post
-      = link_to "アップデート", new_message_path, class: "btn-primary"
+      = link_to "アップロード", new_group_message_path, class: "btn-primary"

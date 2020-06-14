@@ -1,5 +1,5 @@
 .create_bar
-  = form_for @message, :html => {multipart: true, :class => "form-horizontal image" }  do |f|
+  = form_for [@group, @message], :html => {multipart: true, :class => "form-horizontal image" }  do |f|
     .form-message
       = f.label :メッセージ, class: 'form-message__item'
       = f.text_field :name, class: 'form-message__content'
@@ -8,3 +8,6 @@
       = f.label :DATA
       = f.file_field :attachment
       = f.submit "送信", class: "btn-primary"
+    .home-btm
+      = link_to group_messages_path do
+        = icon('fas', 'home fa-2x' )
