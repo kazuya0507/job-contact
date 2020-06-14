@@ -7,7 +7,8 @@
     .other
       %ul.other__list
         %li.other__list__name
-          = current_user.name
+          - @group.users.each do |user|
+            %li= user.name
 
   .posts
     .post
