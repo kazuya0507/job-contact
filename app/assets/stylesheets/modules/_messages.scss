@@ -27,12 +27,21 @@
         font-size: 25px;
       }
       &__menu {
-        font-size: 20px;
         display: flex;
-        li {
+        &__edit{
           margin-left: 5px;
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+          color: #FFF;
+          background: #696969;
+          border-radius: 4px;
+          box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+          font-weight: bold;
+          border: solid 2px #696969;
           a {
-            color: #ffffff;
+            text-decoration: none;
+            color: #FFF;
           }
         }
       }
@@ -88,6 +97,7 @@
         display: flex;
         li {
           margin-right: 5px;
+          font-size: 18px;
         }
       }
     }
@@ -119,44 +129,64 @@
     padding: 35px 40px;
     overflow: scroll;
     .message {
-      padding-bottom: 30px;
-      .upper-message {
-        display: flex;
-        &__staff-name {
-          color: #333333;
-          font-size:20px;
-          font-weight: bold;
-        }
-        &__date {
-          margin-left: 3px;
-          color: #222222;
-          font-size:10px;
-          display: flex;
-          align-items: center;
-        }
+      table{
+        width: 100%;
+        border-collapse:separate;
+        border-spacing: 0;
       }
-      .lower-message {
-        height: 30px;
-        display: flex;
-        &__content {
-          color: #111111;
-          font-size: 25px;
-          width: 100%;
-        }
-        &__check {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        &__count {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .message__text {
-          color: #434A54;
-          font-size: 14px;
-        }
+      table th:first-child{
+        border-radius: 5px 0 0 0;
+      }
+      table th:last-child{
+        border-radius: 0 5px 0 0;
+        border-right: 1px solid #3c6690;
+      }
+      table th{
+        text-align: center;
+        color:white;
+        background: linear-gradient(#829ebc,#225588);
+        border-left: 1px solid #3c6690;
+        border-top: 1px solid #3c6690;
+        border-bottom: 1px solid #3c6690;
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+        width: 25%;
+        padding: 10px 0;
+      }
+      table td{
+        text-align: center;
+        border-left: 1px solid #a8b7c5;
+        border-bottom: 1px solid #a8b7c5;
+        border-top:none;
+        box-shadow: 0px -3px 5px 1px #eee inset;
+        width: 25%;
+        padding: 10px 0;
+      }
+      table td:last-child{
+        border-right: 1px solid #a8b7c5;
+      }
+      table tr:last-child td:first-child {
+        border-radius: 0 0 0 5px;
+      }
+      table tr:last-child td:last-child {
+        border-radius: 0 0 5px 0;
+      }
+      .btn-red {
+        position: relative;
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: #FFF;
+        background: red;
+        border: solid 1px red;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+        cursor: pointer;
+      }
+      .btn-red:active {
+        border: solid 1px red;
+        box-shadow: none;
+        text-shadow: none;
       }
     }
   }
@@ -228,13 +258,9 @@
     .other {
       font-size: 20px;
       &__list {
-        display: flex;
-        justify-content: center;
-        &__department {
-          margin-right: 20px;
-        }
         &__name {
           margin-right: 20px;
+          font-size: 20px;
         }
       }
     }
@@ -300,11 +326,17 @@
       padding: 8px 16px;
       border-radius: 4px;
       transition: .4s;
-    }
-    .btn-primary:hover {
       background-color: #000080;
-      border-color: #000080;
-      color: #FFF;
+    }
+  }
+  .home-btm {
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    color: #333333;
+    i {
+      color: black;
     }
   }
 }

@@ -2,8 +2,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |title|string|
-|body|text|
-|data|string|
+|string|name|
+|attachment|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association

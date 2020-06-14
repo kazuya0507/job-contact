@@ -2,15 +2,17 @@
   .left-header
     .left-header__box
       %p.left-header__box__name
-        元村
+        = current_user.name
       %ul.left-header__box__menu
         %li.left-header__box__menu__edit
-          = icon('fas', 'edit')
+          = link_to new_group_path do
+            グループ作成
 
   .groups
-    .group
-      .group__name
-        学習
-      .group__message
-        投稿
-            
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message
