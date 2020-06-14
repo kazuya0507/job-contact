@@ -3,11 +3,7 @@
     .main-header__group
       %h1.main-header__group__name
         = @group.name
-      %ul.main-header__group__member
-        メンバー : 
-        %li.main-header__group__member__name
-          - @group.users.each do |user|
-            %li= user.name
+
     = link_to edit_group_url(@group) do
       .main-header__edit-btn
         編集

@@ -85,20 +85,11 @@
     &__group {
       padding-left: 40px;
       &__name {
+        line-height: 100px;
         font-size: 32px;
         color:#333333;
         margin-bottom: 2px;
         text-align: left;
-      }
-      &__member{
-        font-size: 18px;
-        color:#333333;
-        bottom: 0 ;
-        display: flex;
-        li {
-          margin-right: 5px;
-          font-size: 18px;
-        }
       }
     }
     .main-header__edit-btn {
@@ -256,10 +247,12 @@
     padding:20px 20px 0;
     overflow: scroll;
     .other {
-      font-size: 20px;
       &__list {
         &__name {
           margin-right: 20px;
+          font-size: 20px;
+        }
+        li {
           font-size: 20px;
         }
       }
