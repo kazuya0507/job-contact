@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :messages
   
   validates :name, presence: true, uniqueness: true
+  has_many :okays, dependent: :destroy
+  has_many :okays_users, through: :okays, source: :user
 end
