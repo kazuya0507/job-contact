@@ -28,3 +28,4 @@
 /tmp
 public/uploads/*
 /.env
+/config/database.yml
