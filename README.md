@@ -43,28 +43,3 @@ has_many :messages
 belongs_to :group
 belongs_to :user
 
-
-## calendersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false, default: ""|
-|content|text|null: false, default: ""|
-|password|string|null: false, default: ""|
-|start_date|datetime|null: false, default: ""|
-|end_date|datetime|null: false, default: ""|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-belongs_to :user
-
-
-## time_cardsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|year|integer|default: ""|
-|month|integer|default: ""|
-|day|integer|default: ""|
-|in_at|datetime|
-|out_at|datetime|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-belongs_to :user
