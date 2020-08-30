@@ -20,8 +20,8 @@ default: &default
 development:
   <<: *default
   database: job-contact_development
-  aws_access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
-  aws_secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+  # aws_access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+  # aws_secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
