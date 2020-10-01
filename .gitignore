@@ -31,3 +31,4 @@ public/uploads/*
 config/database.yml
 config/credentials.yml.enc
 docker-compose.yml
+vendor/bundle/ruby/2.5.0
