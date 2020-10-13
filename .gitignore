@@ -32,3 +32,4 @@ config/database.yml
 config/credentials.yml.enc
 docker-compose.yml
 vendor
+test
